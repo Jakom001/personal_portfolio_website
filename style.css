@@ -86,6 +86,15 @@ li{
     opacity: 1;
     transform: rotate(90deg);
 }
+/* nav menu */
+@media screen and (max-width: 768px){
+    .nav-menu{
+        background-color: red;
+    }
+    
+}
+
+
 
 section,
 footer{
@@ -103,16 +112,18 @@ footer{
 
 
 /* =============== HOME ============ */
-.home-item{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
+
 .home-hero{
+    width: 100%;
     row-gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+
 }
+
 .name,
 .iama{
     font-weight: bold;
@@ -142,8 +153,7 @@ button.all-buttons:hover{
 .image{
     max-width:100%;
     height: auto;
-    
-    
+        
 }
 .front-end h2, 
 .front-end p{
@@ -156,7 +166,7 @@ button.all-buttons:hover{
 .projo,
 .about-button{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-weight: 600;
 }
@@ -177,27 +187,23 @@ button.portfolio:hover{
 }
 
 /* =============== SERVICE ============ */
-#service h1{
+#service h1,
+#skills h1,
+#portfolio h1{
     text-align: center;
+    font-size: 2.5rem;
     padding-bottom: 2rem;
 }
-.service{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
 
-}
 .service-card{
     border: 2px solid var(--black-color);
-    max-width: 600px;
+    width: 100%;
     padding: 20px;
     display: flex;
     align-items:flex-start;
     justify-content: space-between;
     gap: 2rem;
+    margin: 15px 0;
 }
 .service-icon{
     background-color: var(--white-color);
@@ -215,13 +221,12 @@ button.portfolio:hover{
 
 
 /* =============== SKILLS ============ */
-
 .skill-content{
     border: 2px solid var(--black-color);
-    width: 200px;
+    width: 250px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding: 10px 16px;
     gap: 10px;
    
@@ -251,7 +256,7 @@ button.portfolio:hover{
     background-color: var(--black-color);
     color: var(--white-color);
     font-weight: bold;
-    
+   
 }
 .intrested{
     display: flex;
@@ -302,19 +307,22 @@ button.web-design{
 .contact{
     background-color: var(--black-color);
 }
-.contact-form{
+.contact-form,
+.colspan2{
     background-color: var(--white-color);
-    padding: 18px 16px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.contact-form{
+    padding: 18px 16px;
 }
 input,
 textarea{
     padding: 16px;
 }
 .contact-details{
-    padding-top: 25px;
+    padding-top: 18px;
 }
 
 .contact-icon{
@@ -339,7 +347,6 @@ textarea{
     padding-bottom: 10px;
 }
 
-
 /* =============== FOOTER ============ */
 footer{
     background-color: var(--black-color);
@@ -358,4 +365,61 @@ footer{
 }
 .footer-icons i{
     padding: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .home-item{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .home-hero,
+    .service-card,
+    .skill-card,
+    .contact-form,
+    .portfolio img{
+        width: calc(45vw);
+      
+    }
+    .about,
+    .portfolio{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+    }
+    .service{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .skills{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .intrested{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+    
+    .contact-items{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    
+    }
+    .colspan2{
+        width: 48%;
+    }
+    .colspan1{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
