@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () =>{
-    const toggleBurger = document.querySelector('.nav-item');
-    // const navItem = document.querySelector('.nav-menu');
+    const toogleBurger = document.getElementById('toggleburger');
+    const navMEnu = document.getElementById('nav-menu');
 
 
-    toggleBurger.addEventListener('click', () =>{
-        // navItem.classList.toggle('show-menu');
-        toggleBurger.classList.toggle('show-icon')
-
-
-    });
+        toogleBurger.addEventListener('click', () =>{
+            navMEnu.classList.toggle('show-menu');
+            toogleBurger.classList.toggle('show-icon');
+        });
+    
 });
