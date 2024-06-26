@@ -2,7 +2,9 @@
 
 
 :root{
-    --body-color: #fff;
+    --header-height: 3.5rem;
+
+    --body-color: hsl(220, 100%, 97%);
     --black-color: hsl(220, 24%, 12%);
     --black-color-light: hsl(220, 24%, 15%);
     --white-color: #fff;
@@ -34,12 +36,12 @@ li{
     list-style: none;
 }
 .container{
-    margin-inline: 2rem;
+    max-width: 1120px;
+    margin-inline: 1.5rem;
 }
 
 /* =============== HEADER ============ */
 .header{
-    height: 3.8rem;
     background-color: var(--white-color);
     width: 100%;
     box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
@@ -51,7 +53,7 @@ li{
 
 /* =============== NAVBAR ============ */
 .nav{
-    height: 100%;
+    height: var(--header-height);
 }
 .nav-items{
     height: 100%;
@@ -131,16 +133,75 @@ li{
     align-items: center;
     pointer-events: initial;
     width: 100%;
-    transition: color .3s;
+    transition: all .4s;
     
 }
-.nav_link:hover{
+.nav_link:hover,
+.nav_link:focus{
     color: var(--primary-color);
 }
+
 .show-menu{
     opacity: 1;
     top: 3.5rem;
 }
+/* Breakpoints */
+/* for small devices */
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+    .nav_link{
+        padding-inline: 1rem;
+    }
+   
+}
+
+/* for larger devices */
+@media screen and (min-width: 1118px){
+    .container{
+        margin-inline: auto;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-burger{
+        display: none;
+    }
+    .nav-list{
+        height: 100%;
+        display: flex;
+        column-gap: 3rem;
+    }
+    .nav_link{
+        height: 100%;
+        padding: 0;
+        justify-content: initial;
+        column-gap: .25rem;
+        text-decoration: none;
+        position: relative;
+    }
+    .nav_link::after{
+        content: '';
+        position: absolute;
+        bottom: 9px;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background-color: var(--primary-color);
+        opacity: 0;
+        transition: all 0.4s;
+        pointer-events: none;
+    }
+    .nav_link:hover::after,
+    .nav_link:focus::after{
+        opacity: 1;
+        width: 100%;
+    }
+    
+}
+
 
 section,
 footer{
@@ -174,9 +235,37 @@ footer{
 .iama{
     font-weight: bold;
 }
-.iama{
-    font-size: 2rem;
+.moving-text{
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
 }
+.iama{
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+.typing-text{
+    position: relative;
+    color: var(--black-color);
+}
+.typing-text::before{
+    content: "";
+    position: absolute;
+    border-left: 3px solid var(--black-color);
+    background-color: var(--body-color);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: anim 4s steps(12) infinite;
+}
+@keyframes anim{
+    40%,
+    60%{
+        left: calc(100% + 4px);
+    }
+}
+
 button.all-buttons{
     width: 150px;
     padding: 12px 20px;
@@ -198,7 +287,8 @@ button.all-buttons:hover{
 
 .image{
     max-width:100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
         
 }
 .front-end h2, 
@@ -328,6 +418,13 @@ button.intre:hover a{
 
 
 /* =============== PROJECTS ============ */
+.mywork{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
 .projects{
     display: flex;
     flex-direction: column;
@@ -348,6 +445,57 @@ button.web-design{
 .projects p{
     padding: 12px;
 }
+
+.portfolio-image{
+    position: relative;
+}
+.image_arrow_link{
+    position: absolute;
+    top: 10px;
+    left:  10px;
+    z-index: 100;
+    display: none;
+}
+.image-button{
+    box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+    padding: 4px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: var(--white-color);
+}
+.image-button a{
+    color: var(--black-color);
+}
+.portfolio-image:hover .image_arrow_link {
+    display: block; 
+}
+
+/* =============== Testimonial ============ */
+.testimonial{
+    height: 180px;
+}
+.recommend-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.recommend{
+    border: 1px solid var(--black-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 12px;
+}
+.testimonial-image{
+    border: 2px solid var(--black-color);   
+}
+
+.test-description h4{
+    padding-top: 10px;
+}
+
 
 /* =============== Contact ============ */
 .contact{
@@ -406,9 +554,8 @@ footer{
     justify-content: space-between;
     gap: 12px;
     padding: 12px;
-    
-
 }
+
 .footer-icons i{
     padding: 5px;
 }
@@ -420,10 +567,8 @@ footer{
         align-items: center;
     }
     .home-hero,
-    .service-card,
     .skill-card,
-    .contact-form,
-    .portfolio img{
+    .contact-form{
         width: calc(45vw);
       
     }
@@ -435,10 +580,11 @@ footer{
         gap: 3rem;
     }
     .service{
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto auto;
         align-items: center;
         justify-content: space-between;
+        gap: 3rem;
     }
     .skills{
         display: flex;
@@ -450,12 +596,14 @@ footer{
         justify-content: space-between;
         padding: 0 3rem;
     }
+    .testimonial{
+        height: 280px;
+    }
     
     .contact-items{
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
-    
     }
     .colspan2{
         width: 48%;
@@ -468,4 +616,10 @@ footer{
         flex-direction: row;
         justify-content: space-between;
     }
+}
+@media screen and (min-width:900px) {
+    .testimonial{
+        height: 200px;
+    }
+    
 }

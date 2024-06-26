@@ -8,15 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
 
     <!-- ============= CSS ===============-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ============= swiper CSS ===============-->
+     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- ============= swiper CSS ===============-->
+     <link rel="stylesheet" href="css/lightbox.css">
+
 
     <title>Andrew Peter Portfolio</title>
     
 </head>
 <body>
    <header class="header">
-    <nav class="nav">
-        <div class="nav-items container">
+    <nav class="nav container">
+        <div class="nav-items ">
             <div class="logo">
                 <i class="ri-code-s-slash-line"></i> PETER
             </div>
@@ -43,11 +50,17 @@
    <section class="home-item container" id="home">
     <div class="home-hero ">
         <div class="name">
-            &#128075;,   <marquee behavior="" direction="right">MY NAME IS PETER</marquee> 
+            &#128075;, MY NAME IS PETER
         </div>
-        <div class="iama">
-            I'm a  Developer
+        <div class="moving-text">
+            <span class="iama">
+                I'm a  
+            </span>
+            <span class="iama typing-text">
+                Web Developer
+            </span>
         </div>
+        
         <p>Based in Nairobi, Kenya</p>
         <button class="all-buttons"><a href="#">LET'S START</a></button>
     </div>
@@ -220,18 +233,146 @@
 
 <section class="container" id="portfolio">
     <h1>LATEST PROJECTS</h1>
-    <div class="portfolio">
-        <img src="images/project1.png" alt="project 1" class="image">
-        <div class="projects">
-         <button class="web-design">WEB DESIGN</button>
-    
-         <h4>Website Design for Marketing Agency Startup</h4>
-    
-            <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
-            <button class="all-buttons"><a href="#contact">CONTACT NOW</a></button>
+
+    <div class="mywork">
+        <div class="portfolio">
+            <div class="portfolio-image">
+                <img src="images/project1.png" alt="project 1" class="image">
+                <div class="image_arrow_link">
+                   <button class="image-button"><a href="images/project1.png" data-lightbox="models" dta-title = "Caption1"> <i class="ri-arrow-right-line"></i></a></button>
+                </div>
+            </div>
+            <div class="projects">
+                <button class="web-design">WEB DESIGN</button>
+            
+                <h4>Website Design for Marketing Agency Startup</h4>
+            
+                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
+                <button class="all-buttons"><a href="#">VIEW PROJECT</a></button>
+            </div>
         </div>
+        <div class="portfolio">
+            <div class="portfolio-image">
+                <img src="images/project2.png" alt="project 1" class="image">
+                <div class="image_arrow_link">
+                   <button class="image-button"><a href="images/project2.png" data-lightbox="models" dta-title = "Caption2"> <i class="ri-arrow-right-line"></i></a></button>
+                </div>
+            </div>
+            <div class="projects">
+                <button class="web-design">WEB DESIGN</button>
+            
+                <h4>Website Design for Marketing Agency Startup</h4>
+            
+                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
+                <button class="all-buttons"><a href="#">VIEW PROJECT</a></button>
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="portfolio-image">
+                <img src="images/project3.png" alt="project 1" class="image">
+                <div class="image_arrow_link">
+                   <button class="image-button"><a href="images/project3.png" data-lightbox="models" dta-title = "Caption3"> <i class="ri-arrow-right-line"></i></a></button>
+                </div>
+            </div>
+            <div class="projects">
+                <button class="web-design">WEB DESIGN</button>
+            
+                <h4>Website Design for Marketing Agency Startup</h4>
+            
+                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
+                <button class="all-buttons"><a href="#">VIEW PROJECT</a></button>
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="portfolio-image">
+                <img src="images/project4.png" alt="project 1" class="image">
+                <div class="image_arrow_link">
+                   <button class="image-button"><a href="images/project4.png" data-lightbox="models" dta-title = "Caption4"> <i class="ri-arrow-right-line"></i></a></button>
+                </div>
+            </div>
+            <div class="projects">
+                <button class="web-design">WEB DESIGN</button>
+            
+                <h4>Website Design for Marketing Agency Startup</h4>
+            
+                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores</p>
+                <button class="all-buttons"><a href="#">VIEW PROJECT</a></button>
+            </div>
+        </div>
+        
     </div>
-    
+</section>
+
+
+<section class="container">
+    <h1>TESTIMONIAL</h1>
+    <div class="testimonial swiper">
+        <div class="recommend-content">
+            <div class="swiper-wrapper">
+                <div class="recommend swiper-slide">
+                    <div class="testimonial-image">
+                        <img src="images/testimanial1.png" alt="testimonial-image" class="image">
+                    </div>
+                    <div class="test-description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo non quaerat eius placeat quo natus, delectus rerum error reiciendis eveniet. 
+                        
+                        <h4>Isaac Ochiend</h4>
+                        Front-end developer at Nanosoft
+                    </div>
+                </div>
+
+                <div class="recommend swiper-slide">
+                    <div class="testimonial-image">
+                        <img src="images/testimanial1.png" alt="testimonial-image" class="image">
+                    </div>
+                    <div class="test-description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo non quaerat eius placeat quo natus, delectus rerum error reiciendis eveniet. 
+                        
+                        <h4>Isaac Ochiend</h4>
+                        Front-end developer at Nanosoft
+                    </div>
+                </div>
+                
+                <div class="recommend swiper-slide">
+                    <div class="testimonial-image">
+                        <img src="images/testimanial1.png" alt="testimonial-image" class="image">
+                    </div>
+                    <div class="test-description">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo non quaerat eius placeat quo natus, delectus rerum error reiciendis eveniet. 
+                        
+                        <h4>Isaac Ochiend</h4>
+                        Front-end developer at Nanosoft
+                    </div>
+                </div>
+
+                <div class="recommend swiper-slide">
+                <div class="testimonial-image">
+                    <img src="images/testimanial1.png" alt="testimonial-image" class="image">
+                </div>
+                <div class="test-description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo non quaerat eius placeat quo natus, delectus rerum error reiciendis eveniet. 
+                    
+                    <h4>Isaac Ochiend</h4>
+                    Front-end developer at Nanosoft
+                </div>
+                </div>
+
+                <div class="recommend swiper-slide">
+                <div class="testimonial-image">
+                    <img src="images/testimanial1.png" alt="testimonial-image" class="image">
+                </div>
+                <div class="test-description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo non quaerat eius placeat quo natus, delectus rerum error reiciendis eveniet. 
+                    
+                    <h4>Isaac Ochiend</h4>
+                    Front-end developer at Nanosoft
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        
+    </div>
 
 </section>
 
@@ -307,7 +448,14 @@
 </footer>
 
 
+<!-- ============= MAIN JS ===============-->
+   <script src="js/script.js"></script>
 
-   <script src="script.js"></script>
+
+   <!-- ============= SWIPER JS ===============-->
+   <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Lightbox JS -->
+     <script src="js/lightbox-plus-jquery.js"></script>
 </body>
 </html>
