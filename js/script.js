@@ -19,11 +19,11 @@ document.addEventListener('DOMContentLoaded', () =>{
             typingText.textContent = 'Web developer'
           }, 0);
           setTimeout(() =>{
-            typingText.textContent = 'App developer'
+            typingText.textContent = 'Full-stack dev'
           }, 4000);
 
           setTimeout(() =>{
-            typingText.textContent = 'IOS developer'
+            typingText.textContent = 'Front-end dev'
           }, 8000);
 
         };
