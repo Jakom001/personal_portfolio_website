@@ -607,7 +607,8 @@ footer{
     .service,
     .skills,
     .intrested,
-    .portfolio{
+    .portfolio,
+    .contact-items {
         display: grid;
         grid-template-columns: auto auto;
         justify-content: space-between;
