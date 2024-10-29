@@ -16,6 +16,9 @@
     <!-- ============= swiper CSS ===============-->
      <link rel="stylesheet" href="css/lightbox.css">
 
+     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
 
     <title>Andrew Peter Portfolio</title>
     
@@ -309,27 +312,34 @@
 
 <section class="contact" id="contact">
     <div class="contact-items container">
-        <div class="contact-form">
-            <h2>Get in touch</h2>
-            <p>Our friendly team would love to hear from you.</p>
-            <div class="colspan1">
-                <div class="colspan2">
-                    <label for="">First name</label>
-                    <input type="text" name="fname" placeholder="Name *">
+        <form id="contact-form">
+            <div class="contact-form">
+                <h2>Get in touch</h2>
+                <p>Our friendly team would love to hear from you.</p>
+                <div class="colspan1">
+                    <div class="colspan2">
+                        <label for="fname">First name</label>
+                        <input type="text" id="fname" name="fname" placeholder="Name *" required>
+                        <span class="error" id="fname-error"></span>
+                    </div>
+                    <div class="colspan2">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email *" required>
+                        <span class="error" id="email-error"></span>
+                    </div>
                 </div>
-                <div class="colspan2">
-                    <label for="">Your Email</label>
-                    <input type="text" name="" placeholder="Email *">
-                </div>
-            </div>
-            <label for="">Subject</label>
-            <input type="text" name="" placeholder="Subject *">
-
-            <label for="">Your Message</label>
-            <textarea name="message" id="" cols="20" rows="6" placeholder="Your message *"></textarea>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject *" required>
+                <span class="error" id="subject-error"></span>
         
-            <button class="all-buttons intre"><a href="#">SEND MESSAGE</a></button>
-        </div>
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" cols="20" rows="6" placeholder="Your message *" required></textarea>
+                <span class="error" id="message-error"></span>
+            
+                <button type="submit" class="all-buttons intre">SEND MESSAGE</button>
+            </div>
+        </form>
+        
 
         <div class="contact-details">
             <div class="address">

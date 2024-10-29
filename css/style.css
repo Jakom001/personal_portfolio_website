@@ -582,6 +582,18 @@ textarea{
 .more-details p{
     padding-bottom: 10px;
 }
+.error {
+    color: #ff4d4d; 
+    font-size: 0.9rem; 
+    margin-top: 5px; 
+    display: block; 
+}
+
+input.error-input,
+textarea.error-input {
+    border-color: #ff4d4d; 
+    background-color: #ffe6e6; 
+}
 
 /* =============== FOOTER ============ */
 footer{
@@ -619,7 +631,6 @@ footer{
     }
 }
 @media screen and (min-width: 768px) {
-    
     .colspan2{
         width: 48%;
     }
